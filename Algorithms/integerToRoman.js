@@ -1,15 +1,4 @@
-// Example 1:
-
-// Input: 3
-// Output: "III"
-// Example 2:
-
-// Input: 4
-// Output: "IV"
-// Example 3:
-
-// Input: 9
-// Output: "IX"
+/* jshint esversion: 6 */
 /**
  * @param {number} num
  * @return {string}
@@ -28,7 +17,7 @@ var intToRoman = function(num) {
                           400:'CD',
                           500:'D',
                           900:'CM',
-                          1000:'M',}
+                          1000:'M',};
     if(define_rmnumber[num]) return define_rmnumber[num];
     var numberTmp = num;
     var result = '';

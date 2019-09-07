@@ -1,12 +1,5 @@
-// Given a 32-bit signed integer, reverse digits of an integer.
+/* jshint esversion: 6 */
 
-// Example 1:
-// Input: 123
-// Output: 321
-
-// Example 2:
-// Input: -123
-// Output: -321
 /**
  * @param {number} x
  * @return {number}

@@ -1,5 +1,4 @@
 /*jshint esversion: 6 */
-
 /**
  * @param {number[]} calories
  * @param {number} k
@@ -9,7 +8,7 @@
  */
 var dietPlanPerformance = function (calories, k, lower, upper) {
     var count = 0, j = 0;
-    if (k < 1 || k > calories.length || k > Math.pow(10, 5) || lower < 0 || upper < lower) return 0
+    if (k < 1 || k > calories.length || k > Math.pow(10, 5) || lower < 0 || upper < lower) return 0;
     do {
         let k_day_calories = 0;
         for (j; j < k; j++) {
@@ -25,7 +24,5 @@ var dietPlanPerformance = function (calories, k, lower, upper) {
         k += k;
         if (k > calories.length) k = calories.length;
     } while (true);
-    console.log(count);
     return count;
 };
-dietPlanPerformance([6, 13, 8, 7, 10, 1, 12, 11], 6, 5, 37);
