@@ -1,5 +1,4 @@
 /* jshint esversion: 6 */
-
 /**
  * @param {number} x
  * @return {number}
@@ -16,7 +15,6 @@ var reverse = function(x) {
         string_result = parseInt(string_result)*(-1);
     }
     if(Math.pow(-2,31)>string_result || (Math.pow(2,31)-1) < string_result) return 0;
-    console.log(string_result);
-    return string_result;
+    return parseInt(string_result);
 };
-reverse(12345);
+module.exports = reverse;
