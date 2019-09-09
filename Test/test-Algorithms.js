@@ -6,6 +6,7 @@ const twoSum = require('../Algorithms/twoSum');
 const validParentheses = require('../Algorithms/validParentheses');
 const reverse = require('../Algorithms/reverseInteger');
 const intToRoman = require('../Algorithms/integerToRoman');
+const longestCommonPrefix = require('../Algorithms/longestCommonPrefix');
 
 describe(('Algoritms'), () => {
     beforeEach((done) => {
@@ -93,6 +94,24 @@ describe(('Algoritms'), () => {
         for (let index = 0; index < input.length; index++) {
             it(`it should return ${output_Expected[index]} for convert ${input[index]} to Roman`, (done) => {
                 let result = intToRoman(input[index]);
+                expect(result).to.eql(output_Expected[index]);
+                done();
+            });
+        }
+    });
+    describe(('Longest Common Prefix'), () => {
+        let input = [
+            ["flower", "flow", "flight"],
+            ["dog", "racecar", "car"],
+            ["candy", "car", "card"],
+            ["number", "null", "new"]
+        ];
+        let output_Expected = [
+            "fl", "","ca","n"
+        ];
+        for (let index = 0; index < input.length; index++) {
+            it(`it should return "${output_Expected[index]}" for get longest common prefix of [${input[index]}]`, (done) => {
+                let result = longestCommonPrefix(input[index]);
                 expect(result).to.eql(output_Expected[index]);
                 done();
             });
